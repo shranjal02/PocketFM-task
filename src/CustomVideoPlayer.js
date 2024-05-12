@@ -9,9 +9,11 @@ const CustomVideoPlayer = () => {
   const [duration, setDuration] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const [videos] = useState([
-    "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
-    "https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
-    "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+     "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+     "https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+     "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+     "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+     "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TheCuriousCaseofBenjaminButton.mp4"
   ]);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [showControls, setShowControls] = useState(false);
