@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/PocketFM-task/static/js/main.336611b1.js",
+    "main.js": "/PocketFM-task/static/js/main.ea4195da.js",
     "static/js/453.eff13158.chunk.js": "/PocketFM-task/static/js/453.eff13158.chunk.js",
     "index.html": "/PocketFM-task/index.html",
-    "main.336611b1.js.map": "/PocketFM-task/static/js/main.336611b1.js.map",
+    "main.ea4195da.js.map": "/PocketFM-task/static/js/main.ea4195da.js.map",
     "453.eff13158.chunk.js.map": "/PocketFM-task/static/js/453.eff13158.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.336611b1.js"
+    "static/js/main.ea4195da.js"
   ]
 }
