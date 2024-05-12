@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/PocketFM-task/static/js/main.b191d43e.js",
+    "static/js/453.eff13158.chunk.js": "/PocketFM-task/static/js/453.eff13158.chunk.js",
+    "index.html": "/PocketFM-task/index.html",
+    "main.b191d43e.js.map": "/PocketFM-task/static/js/main.b191d43e.js.map",
+    "453.eff13158.chunk.js.map": "/PocketFM-task/static/js/453.eff13158.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.b191d43e.js"
+  ]
+}
