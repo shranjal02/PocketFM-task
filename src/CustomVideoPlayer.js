@@ -9,11 +9,11 @@ const CustomVideoPlayer = () => {
   const [duration, setDuration] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const [videos] = useState([
-     "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
-     "https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
-     "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-     "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-     "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TheCuriousCaseofBenjaminButton.mp4"
+      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+      "https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+      "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+      "https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
   ]);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [showControls, setShowControls] = useState(false);
@@ -182,12 +182,23 @@ const CustomVideoPlayer = () => {
   };
 
   const playPreviousVideo = () => {
-    setCurrentVideoIndex((prevIndex) => (prevIndex === 0 ? videos.length - 1 : prevIndex - 1));
+    setCurrentVideoIndex((prevIndex) => {
+      const newIndex = prevIndex === 0 ? videos.length - 1 : prevIndex - 1;
+      return newIndex;
+    });
   };
-
+  
   const playNextVideo = () => {
-    setCurrentVideoIndex((prevIndex) => (prevIndex === videos.length - 1 ? 0 : prevIndex + 1));
-  };
+    setCurrentVideoIndex((prevIndex) => {
+      const newIndex = prevIndex === videos.length - 1 ? 0 : prevIndex + 1;
+      return newIndex;
+    });
+  };  
+
+  useEffect(() => {
+    if (isLoading) return;
+    videoRef.current.play().catch((e) => console.error("Error attempting to play video:", e));
+  }, [currentVideoIndex]);
 
   return (
     <div className="relative">
